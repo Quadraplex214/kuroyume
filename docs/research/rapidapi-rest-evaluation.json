@@ -1,0 +1,260 @@
+[
+  {
+    "name": "rapid-genres",
+    "url": "https://myanimelist.p.rapidapi.com/v2/manga/genres",
+    "status": 200,
+    "count": 79,
+    "keys": [
+      "title",
+      "amount",
+      "id"
+    ],
+    "exampleTitle": "Action",
+    "rate": {
+      "limit": "100",
+      "remaining": "88"
+    }
+  },
+  {
+    "name": "rapid-detail",
+    "url": "https://myanimelist.p.rapidapi.com/anime/52991",
+    "status": 200,
+    "keys": [
+      "title_ov",
+      "title_en",
+      "synopsis",
+      "alternative_titles",
+      "information",
+      "statistics",
+      "characters",
+      "picture_url"
+    ],
+    "information": {
+      "type": [
+        {
+          "name": "TV",
+          "url": "https://myanimelist.nethttps://myanimelist.net/topanime.php?type=tv"
+        }
+      ],
+      "episodes": "28",
+      "status": "Finished Airing",
+      "aired": "Sep 29, 2023 to Mar 22, 2024",
+      "premiered": [
+        {
+          "name": "Fall 2023",
+          "url": "https://myanimelist.nethttps://myanimelist.net/anime/season/2023/fall"
+        }
+      ],
+      "broadcast": "Fridays at 23:00 (JST)",
+      "producers": [
+        {
+          "name": "Aniplex",
+          "url": "https://myanimelist.net/anime/producer/17/Aniplex"
+        },
+        {
+          "name": "Dentsu",
+          "url": "https://myanimelist.net/anime/producer/53/Dentsu"
+        },
+        {
+          "name": "Shogakukan-Shueisha Productions",
+          "url": "https://myanimelist.net/anime/producer/62/Shogakukan-Shueisha_Productions"
+        },
+        {
+          "name": "Nippon Television Network",
+          "url": "https://myanimelist.net/anime/producer/1003/Nippon_Television_Network"
+        },
+        {
+          "name": "TOHO animation",
+          "url": "https://myanimelist.net/anime/producer/1143/TOHO_animation"
+        },
+        {
+          "name": "Shogakukan",
+          "url": "https://myanimelist.net/anime/producer/1430/Shogakukan"
+        }
+      ],
+      "licensors": [
+        {
+          "name": "Crunchyroll",
+          "url": "https://myanimelist.net/anime/producer/1468/Crunchyroll"
+        }
+      ],
+      "studios": [
+        {
+          "name": "Madhouse",
+          "url": "https://myanimelist.net/anime/producer/11/Madhouse"
+        }
+      ],
+      "source": [
+        {
+          "name": "Manga",
+          "url": "https://myanimelist.nethttps://myanimelist.net/anime/52991/Sousou_no_Frieren#related_entries"
+        }
+      ],
+      "genre": "None",
+      "theme": "None",
+      "duration": "24 min. per ep.",
+      "rating": "PG-13 - Teens 13 or older",
+      "genres": [
+        {
+          "name": "Adventure",
+          "url": "https://myanimelist.net/anime/genre/2/Adventure"
+        },
+        {
+          "name": "Award Winning",
+          "url": "https://myanimelist.net/anime/genre/46/Award_Winning"
+        },
+        {
+          "name": "Drama",
+          "url": "https://myanimelist.net/anime/genre/8/Drama"
+        },
+        {
+          "name": "Fantasy",
+          "url": "https://myanimelist.net/anime/genre/10/Fantasy"
+        }
+      ],
+      "demographic": [
+        {
+          "name": "Shounen",
+          "url": "https://myanimelist.net/anime/genre/27/Shounen"
+        }
+      ]
+    },
+    "statistics": {
+      "score": 9.25,
+      "ranked": 1,
+      "popularity": 97,
+      "members": 1516141,
+      "favorites": 93483
+    },
+    "exampleTitle": "Frieren: Beyond Journey's End",
+    "rate": {
+      "limit": "100",
+      "remaining": "87"
+    }
+  },
+  {
+    "name": "rapid-manhwa",
+    "url": "https://myanimelist.p.rapidapi.com/manga/top/manhwa?p=1",
+    "status": 200,
+    "count": 50,
+    "keys": [
+      "title",
+      "picture_url",
+      "myanimelist_url",
+      "myanimelist_id",
+      "rank",
+      "score",
+      "type",
+      "aired_on",
+      "members"
+    ],
+    "exampleTitle": "The Greatest Estate Developer",
+    "rate": {
+      "limit": "100",
+      "remaining": "86"
+    }
+  },
+  {
+    "name": "rapid-season",
+    "url": "https://myanimelist.p.rapidapi.com/v2/anime/seasonal?year=2025&season=winter",
+    "status": 200,
+    "keys": [
+      "TV (New)",
+      "TV (Continuing)",
+      "ONA",
+      "OVA",
+      "Movie",
+      "Special"
+    ],
+    "rate": {
+      "limit": "100",
+      "remaining": "85"
+    }
+  },
+  {
+    "name": "rapid-search",
+    "url": "https://myanimelist.p.rapidapi.com/v2/anime/search?q=Frieren&n=3&score=0",
+    "status": 200,
+    "count": 3,
+    "keys": [
+      "title",
+      "description",
+      "picture_url",
+      "myanimelist_url",
+      "myanimelist_id"
+    ],
+    "exampleTitle": "Sousou no Frieren 2nd Season",
+    "rate": {
+      "limit": "100",
+      "remaining": "84"
+    }
+  },
+  {
+    "name": "jikan-detail",
+    "url": "https://api.jikan.moe/v4/anime/52991/full",
+    "status": 200,
+    "keys": [
+      "mal_id",
+      "url",
+      "images",
+      "trailer",
+      "approved",
+      "titles",
+      "title",
+      "title_english",
+      "title_japanese",
+      "title_synonyms",
+      "type",
+      "source",
+      "episodes",
+      "status",
+      "airing",
+      "aired",
+      "duration",
+      "rating",
+      "score",
+      "scored_by",
+      "rank",
+      "popularity",
+      "members",
+      "favorites",
+      "synopsis",
+      "background",
+      "season",
+      "year",
+      "broadcast",
+      "producers",
+      "licensors",
+      "studios",
+      "genres",
+      "explicit_genres",
+      "themes",
+      "demographics",
+      "relations",
+      "theme",
+      "external",
+      "streaming"
+    ],
+    "exampleTitle": "Sousou no Frieren",
+    "rate": {
+      "limit": null,
+      "remaining": null
+    }
+  },
+  {
+    "name": "jikan-manhwa",
+    "url": "https://api.jikan.moe/v4/manga?type=manhwa&order_by=score&sort=desc&limit=3&sfw=true",
+    "status": 504,
+    "keys": [
+      "status",
+      "type",
+      "message",
+      "error"
+    ],
+    "rate": {
+      "limit": null,
+      "remaining": null
+    },
+    "message": "Jikan failed to connect to MyAnimeList. MyAnimeList may be down/unavailable or refuses to connect"
+  }
+]

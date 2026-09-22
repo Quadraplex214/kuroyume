@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-09-19T13:57:22.381Z",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "ms": 122,
+      "providerUnavailable": false,
+      "heading": "Some storiesstay with you.",
+      "renderError": false
+    },
+    {
+      "path": "/anime",
+      "status": 200,
+      "ms": 1739,
+      "providerUnavailable": false,
+      "heading": "Worlds in motion.",
+      "renderError": false
+    },
+    {
+      "path": "/manga",
+      "status": 200,
+      "ms": 1255,
+      "providerUnavailable": false,
+      "heading": "A world in every line.",
+      "renderError": false
+    },
+    {
+      "path": "/manhwa",
+      "status": 200,
+      "ms": 500,
+      "providerUnavailable": false,
+      "heading": "Beyond the panel.",
+      "renderError": false
+    },
+    {
+      "path": "/discover?q=Frieren&medium=anime",
+      "status": 200,
+      "ms": 2035,
+      "providerUnavailable": false,
+      "heading": "Follow your curiosity.",
+      "renderError": false
+    },
+    {
+      "path": "/discover?medium=manga&format=manhwa",
+      "status": 200,
+      "providerUnavailable": false,
+      "cards": 50,
+      "heading": "Follow your curiosity.",
+      "recheckedAt": "2026-09-19T14:22:52.673Z"
+    },
+    {
+      "path": "/manga/121496",
+      "status": 200,
+      "ms": 2921,
+      "providerUnavailable": true,
+      "heading": "Solo Leveling",
+      "renderError": false
+    },
+    {
+      "path": "/character/184947",
+      "status": 200,
+      "ms": 1523,
+      "providerUnavailable": true,
+      "renderError": false
+    },
+    {
+      "path": "/person/6686",
+      "status": 200,
+      "ms": 1105,
+      "providerUnavailable": true,
+      "renderError": false
+    },
+    {
+      "path": "/studio/11",
+      "status": 200,
+      "ms": 1101,
+      "providerUnavailable": true,
+      "renderError": false
+    },
+    {
+      "path": "/season/2025/winter",
+      "status": 200,
+      "providerUnavailable": false,
+      "cards": 24,
+      "heading": "winter 2025.",
+      "recheckedAt": "2026-09-19T14:22:52.202Z"
+    },
+    {
+      "path": "/genre/fantasy",
+      "status": 200,
+      "ms": 1100,
+      "providerUnavailable": true,
+      "heading": "A little wonder.",
+      "renderError": false
+    },
+    {
+      "path": "/recommendations?medium=anime&id=52991",
+      "status": 200,
+      "ms": 261,
+      "providerUnavailable": false,
+      "heading": "Follow the thread.",
+      "renderError": false
+    },
+    {
+      "path": "/library",
+      "status": 200,
+      "ms": 39,
+      "providerUnavailable": false,
+      "heading": "Your stories.Your pace.",
+      "renderError": false
+    },
+    {
+      "path": "/compare",
+      "status": 200,
+      "ms": 206,
+      "providerUnavailable": false,
+      "heading": "The side-by-side.",
+      "renderError": false
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "ms": 205,
+      "providerUnavailable": false,
+      "heading": "Stories are betterwhen you find your own.",
+      "renderError": false
+    },
+    {
+      "path": "/anime/not-an-id",
+      "status": 200,
+      "ms": 57,
+      "providerUnavailable": false,
+      "renderError": false
+    },
+    {
+      "path": "/season/9999/winter",
+      "status": 200,
+      "ms": 49,
+      "providerUnavailable": false,
+      "renderError": false
+    }
+  ]
+}

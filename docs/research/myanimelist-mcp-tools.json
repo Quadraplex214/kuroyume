@@ -1,0 +1,831 @@
+{
+  "checkedAt": "2026-09-19T10:53:27.125Z",
+  "tools": [
+    {
+      "name": "Get_Manga_reviews",
+      "description": "Get recent reviews of all Mangas",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/manga/reviews",
+            "description": "Endpoint: GET /v2/manga/reviews",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "exclude_tags": {
+            "default": "creative,not_recommended",
+            "description": "Exclude review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "include_tags": {
+            "default": "recommended",
+            "description": "Filter review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Desired results page.\n\nDefault is `1`.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          },
+          "preliminary": {
+            "default": "true",
+            "description": "Show preliminary reviews.\n\nDefault: `true`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          },
+          "spoilers": {
+            "default": "false",
+            "description": "Show reviews that could contain spoilers.\n\nDefault: `false`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Anime_Genres",
+      "description": "Get all anime genres. Each result contains the name of the Genre, the amount of animes with that genre and the unique genre id (Used in Search).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/genres",
+            "description": "Endpoint: GET /v2/anime/genres",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Seasonal_Animes",
+      "description": "Get animes from specific season.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/seasonal",
+            "description": "Endpoint: GET /v2/anime/seasonal",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "season": {
+            "description": "Season that should be searched.\n\nDefault: `summer`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "year": {
+            "default": "2023",
+            "description": "The year of the season.\n\nDefault is the current year.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Anime_Reviews",
+      "description": "Get recent reviews of all Animes",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/reviews",
+            "description": "Endpoint: GET /v2/anime/reviews",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "exclude_tags": {
+            "default": "creative,not_recommended",
+            "description": "Exclude review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "include_tags": {
+            "default": "recommended",
+            "description": "Filter review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Desired results page.\n\nDefault is `1`.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          },
+          "preliminary": {
+            "default": "true",
+            "description": "Show preliminary reviews.\n\nDefault: `true`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          },
+          "spoilers": {
+            "default": "false",
+            "description": "Show reviews that could contain spoilers.\n\nDefault: `false`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Manga",
+      "description": "Get Manga by using the manga id from MyAnimeList. You can obtain the manga id by using search.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/manga/{manga_id}",
+            "description": "Endpoint: GET /manga/{manga_id}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "manga_id": {
+            "default": "21",
+            "description": "ID of the Manga.\nCan be found by using the search endpoint or by searching on [https://myanimelist.net/](url).",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "string"
+          }
+        },
+        "required": [
+          "manga_id"
+        ]
+      }
+    },
+    {
+      "name": "Get_Top_Mangas",
+      "description": "Get the Top Mangas from multiple categories.\n\n- Top All\n- Top Manga\n- Top Oneshot\n- Top Doujinshi\n- Top Light Novel\n- Top Novel\n- Top Manhwa\n- Top Manhua\n- Most Popular\n- Most Favorited",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/manga/top/{category}",
+            "description": "Endpoint: GET /manga/top/{category}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "category": {
+            "default": "all,manga,oneshots,doujin,lightnovels,novels,manhwa,manhua,bypopularity,favorite",
+            "description": "The category you want to filter the top ranking mangas from.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Page of results.\n\nDefault `1`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        },
+        "required": [
+          "category"
+        ]
+      }
+    },
+    {
+      "name": "Get_Anime_Recommendations",
+      "description": "Get recommendation pairs that contain a previous anime and a new anime that fits the previous one.\nResults always contain `100` Recommendations. Next page returns the next `100` Recommendations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/recommendations",
+            "description": "Endpoint: GET /v2/anime/recommendations",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Desired results page.\n\nDefault is `1`.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Top_Animes",
+      "description": "Get the Top Animes from multiple categories.\n\n- Top All\n- Top Airing\n- Top Upcoming\n- Top TV Series\n- Top Movie Animes\n- Top OVA Animes\n- Top ONA Animes\n- Top Anime Specials\n- Most Popular\n- Most Favorited",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/anime/top/{category}",
+            "description": "Endpoint: GET /anime/top/{category}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "category": {
+            "default": "all,airing,upcoming,tv,movie,ova,ona,special,bypopularity,favorite",
+            "description": "The category you want to filter the top ranking animes from.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Page of results.\n\nDefault `1`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        },
+        "required": [
+          "category"
+        ]
+      }
+    },
+    {
+      "name": "Search_Mangas",
+      "description": "Search for a manga using the search_query.\nSearch uses the search from MyAnimeList.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/manga/search",
+            "description": "Endpoint: GET /v2/manga/search",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "genre": {
+            "default": "1,2",
+            "description": "ID of the genre you want to search for. Can be obtained using the Manga Genres Endpoint.\n\nYou can filter for more genres by separating them with ,",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "n": {
+            "default": "50",
+            "description": "Amount of results:\nMinimum: `1`\nDefault: `1`\nMaximum: `50`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          },
+          "q": {
+            "default": "Berserk",
+            "description": "Search Query used by search on [https://myanimelist.net/](url).",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "score": {
+            "default": "0",
+            "description": "Minimum Score of the manga\n\nMinimum: `0`\nAll Animes: `0`\nDefault: `0`\nMaximum: `10`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Search_Animes",
+      "description": "Search for an anime using:\n- Query\n- Amount (`min=1` - `max=50`)\n- Minimum Score of Anime\n\nSearch uses the search from MyAnimeList.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/search",
+            "description": "Endpoint: GET /v2/anime/search",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "genre": {
+            "default": "1,2",
+            "description": "ID of the genre you want to search for. Can be obtained using the Anime Genres Endpoint.\n\nYou can filter for more genres by separating them with `,`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "n": {
+            "default": "50",
+            "description": "Amount of results:\nMinimum: `1`\nDefault: `1`\nMaximum: `50`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          },
+          "q": {
+            "default": "one piece",
+            "description": "Search Query used by search on [https://myanimelist.net/](url).",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "score": {
+            "default": "8",
+            "description": "Minimum Score of the anime\n\nMinimum: `0`\nAll Animes: `0`\nDefault: `0`\nMaximum: `10`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    },
+    {
+      "name": "Get_Anime",
+      "description": "Get Anime by using the anime id from MyAnimeList. You can obtain the anime id by using search.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/anime/{anime_id}",
+            "description": "Endpoint: GET /anime/{anime_id}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "anime_id": {
+            "default": "52991",
+            "description": "ID of the Anime.\nCan be found by using the search endpoint or by searching on https://myanimelist.net/.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "number"
+          }
+        },
+        "required": [
+          "anime_id"
+        ]
+      }
+    },
+    {
+      "name": "Get_Manga_Genres",
+      "description": "Get all manga genres. Each result contains the name of the Genre, the amount of mangas with that genre and the unique genre id (Used in Search).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/manga/genres",
+            "description": "Endpoint: GET /v2/manga/genres",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Manga_Recommendations",
+      "description": "Get recommendation pairs that contain a previous manga and a new manga that fits the previous one.\nResults always contain `100` Recommendations. Next page returns the next `100` Recommendations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/manga/recommendations",
+            "description": "Endpoint: GET /v2/manga/recommendations",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Desired results page.\n\nDefault is `1`.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          }
+        }
+      }
+    },
+    {
+      "name": "Get_Manga_Recommendations_by_Manga",
+      "description": "Get recommendations for the specific manga by using the manga id from MyAnimeList. You can obtain the manga id by using search..\nRetrieves all available recommendations for the specific manga.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/manga/recommendations/{manga_id}",
+            "description": "Endpoint: GET /v2/manga/recommendations/{manga_id}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "manga_id": {
+            "default": "2",
+            "description": "ID of the Manga. Can be found by using the search endpoint or by searching on https://myanimelist.net/.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "number"
+          }
+        },
+        "required": [
+          "manga_id"
+        ]
+      }
+    },
+    {
+      "name": "Get_Anime_Reviews_by_Anime",
+      "description": "Get reviews of a specific Anime by using the anime id from MyAnimeList. You can obtain the anime id by using search.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/reviews/{anime_id}",
+            "description": "Endpoint: GET /v2/anime/reviews/{anime_id}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "anime_id": {
+            "default": "52991",
+            "description": "ID of the Anime. Can be found by using the search endpoint or by searching on https://myanimelist.net/.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "number"
+          },
+          "exclude_tags": {
+            "default": "creative,not_recommended",
+            "description": "Exclude review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "include_tags": {
+            "default": "recommended",
+            "description": "Filter review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "p": {
+            "default": "1",
+            "description": "Desired results page.\n\nDefault is `1`.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          },
+          "preliminary": {
+            "default": "true",
+            "description": "Show preliminary reviews.\n\nDefault: `true`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          },
+          "sort": {
+            "default": "suggested,mostvoted,newest,oldest",
+            "description": "Sort the reviews.\n\nDefault: `suggested`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "spoilers": {
+            "default": "false",
+            "description": "Show reviews that could contain spoilers.\n\nDefault: `false`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "anime_id"
+        ]
+      }
+    },
+    {
+      "name": "Get_Anime_Reviews_by_Manga",
+      "description": "Get reviews of a specific Manga by using the manga id from MyAnimeList. You can obtain the manga id by using search.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/reviews/{manga_id}",
+            "description": "Endpoint: GET /v2/anime/reviews/{manga_id}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "exclude_tags": {
+            "default": "creative,not_recommended",
+            "description": "Exclude review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "include_tags": {
+            "default": "recommended",
+            "description": "Filter review tags.\n\nValues need to be seperated by `,`\n\nPossible tags are:\n- recommended\n- mixed_feelings\n- not_recommended\n- funny\n- informative\n- well-written\n- creative\n\nBy default no filters are active.\n",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "manga_id": {
+            "default": "21",
+            "description": "ID of the Manga. Can be found by using the search endpoint or by searching on https://myanimelist.net/.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "number"
+          },
+          "p": {
+            "default": "1",
+            "description": "Desired results page.\n\nDefault is `1`.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "number"
+          },
+          "preliminary": {
+            "default": "true",
+            "description": "Show preliminary reviews.\n\nDefault: `true`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          },
+          "sort": {
+            "default": "suggested,mostvoted,newest,oldest",
+            "description": "Sort the reviews.\n\nDefault: `suggested`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "string"
+          },
+          "spoilers": {
+            "default": "false",
+            "description": "Show reviews that could contain spoilers.\n\nDefault: `false`",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "query",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "manga_id"
+        ]
+      }
+    },
+    {
+      "name": "Get_Anime_Recommendations_by_Anime",
+      "description": "Get recommendations for the specific anime by using the anime id from MyAnimeList. You can obtain the anime id by using search.\nRetrieves all available recommendations for the specific anime.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "_endpoint": {
+            "default": "/v2/anime/recommendations/{anime_id}",
+            "description": "Endpoint: GET /v2/anime/recommendations/{anime_id}",
+            "hidden": true,
+            "type": "string"
+          },
+          "_method": {
+            "default": "GET",
+            "description": "HTTP method",
+            "hidden": true,
+            "type": "string"
+          },
+          "anime_id": {
+            "default": "52991",
+            "description": "ID of the Anime. Can be found by using the search endpoint or by searching on https://myanimelist.net/.",
+            "externalDocs": {
+              "description": "",
+              "url": ""
+            },
+            "in": "path",
+            "type": "number"
+          }
+        },
+        "required": [
+          "anime_id"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+import type { Title } from "./catalog/types";
+const picks = [
+  {
+    id: 52991,
+    medium: "anime",
+    title: "Frieren: Beyond Journey’s End",
+    short: "Frieren",
+    image: "frieren",
+    genre: "Fantasy",
+    note: "A journey after the journey.",
+  },
+  {
+    id: 121496,
+    medium: "manga",
+    title: "Solo Leveling",
+    short: "Solo Leveling",
+    image: "solo",
+    genre: "Action",
+    note: "From the weakest to the extraordinary.",
+  },
+  {
+    id: 1,
+    medium: "anime",
+    title: "Cowboy Bebop",
+    short: "Cowboy Bebop",
+    image: "bebop",
+    genre: "Sci-Fi",
+    note: "See you, space cowboy.",
+  },
+  {
+    id: 100035,
+    medium: "manga",
+    title: "Witch Hat Atelier",
+    short: "Witch Hat Atelier",
+    image: "witch",
+    genre: "Fantasy",
+    note: "There is magic in every line.",
+  },
+  {
+    id: 642,
+    medium: "manga",
+    title: "Vinland Saga",
+    short: "Vinland Saga",
+    image: "vinland",
+    genre: "Adventure",
+    note: "Beyond revenge, a new horizon.",
+  },
+  {
+    id: 2,
+    medium: "manga",
+    title: "Berserk",
+    short: "Berserk",
+    image: "berserk",
+    genre: "Dark Fantasy",
+    note: "Beautiful. Brutal. Unforgettable.",
+  },
+] as const;
+export const editorial = picks.map((t) => ({
+  ...t,
+  cover: `/artwork/${t.image}-cover.jpg`,
+  href: `/${t.medium}/${t.id}`,
+}));
+export const editorialTitles: Title[] = picks.map((t) => ({
+  id: t.id,
+  medium: t.medium,
+  title: t.title,
+  image: `/artwork/${t.image}-cover.jpg`,
+  score: null,
+  rank: null,
+  popularity: null,
+  members: null,
+  format: t.id === 121496 ? "Manhwa" : t.medium === "anime" ? "Anime" : "Manga",
+  status: null,
+  episodes: null,
+  chapters: null,
+  year: null,
+  genres: [],
+  synopsis: t.note,
+}));
+export const moods = [
+  {
+    slug: "fantasy",
+    id: 10,
+    name: "Fantasy",
+    mood: "A little wonder",
+    description:
+      "Worlds beyond the everyday. Magic, myth, and the beautifully impossible.",
+    symbol: "✦",
+  },
+  {
+    slug: "action",
+    id: 1,
+    name: "Action",
+    mood: "An adrenaline rush",
+    description:
+      "High stakes. Impossible odds. Stories that refuse to stand still.",
+    symbol: "↯",
+  },
+  {
+    slug: "adventure",
+    id: 2,
+    name: "Adventure",
+    mood: "Somewhere far away",
+    description:
+      "A new horizon, an unlikely companion, and the journey between.",
+    symbol: "↗",
+  },
+  {
+    slug: "sci-fi",
+    id: 24,
+    name: "Sci-Fi",
+    mood: "Out of this world",
+    description: "Distant futures and very human questions.",
+    symbol: "◎",
+  },
+  {
+    slug: "drama",
+    id: 8,
+    name: "Drama",
+    mood: "Feel everything",
+    description: "The small moments and big emotions that make us human.",
+    symbol: "◌",
+  },
+  {
+    slug: "romance",
+    id: 22,
+    name: "Romance",
+    mood: "A softer landing",
+    description:
+      "Slow beginnings, missed connections, and finding your person.",
+    symbol: "♡",
+  },
+];

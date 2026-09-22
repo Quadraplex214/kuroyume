@@ -1,0 +1,168 @@
+{
+  "checkedAt": "2026-09-19T10:54:14.711Z",
+  "results": [
+    {
+      "name": "Search_Animes",
+      "arguments": {
+        "q": "Frieren",
+        "n": 3,
+        "score": 0,
+        "genre": ""
+      },
+      "isError": false,
+      "shape": "array",
+      "keys": [
+        "0",
+        "1",
+        "2"
+      ],
+      "count": 3,
+      "outcome": "returned-data"
+    },
+    {
+      "name": "Search_Mangas",
+      "arguments": {
+        "q": "Solo Leveling",
+        "n": 3,
+        "score": 0,
+        "genre": ""
+      },
+      "isError": false,
+      "shape": "array",
+      "keys": [
+        "0",
+        "1",
+        "2"
+      ],
+      "count": 3,
+      "outcome": "returned-data"
+    },
+    {
+      "name": "Get_Anime",
+      "arguments": {
+        "anime_id": 52991
+      },
+      "isError": false,
+      "shape": "object",
+      "keys": [
+        "title_ov",
+        "title_en",
+        "synopsis",
+        "alternative_titles",
+        "information",
+        "statistics",
+        "characters",
+        "picture_url"
+      ],
+      "outcome": "returned-data",
+      "notes": "Some information URLs repeat the MyAnimeList hostname."
+    },
+    {
+      "name": "Get_Manga",
+      "arguments": {
+        "manga_id": "121496"
+      },
+      "isError": false,
+      "shape": "object",
+      "keys": [
+        "title_ov",
+        "title_en",
+        "synopsis",
+        "alternative_titles",
+        "information",
+        "statistics",
+        "characters",
+        "picture_url"
+      ],
+      "outcome": "returned-data"
+    },
+    {
+      "name": "Get_Top_Mangas",
+      "arguments": {
+        "category": "manhwa",
+        "p": 1
+      },
+      "isError": false,
+      "shape": "array",
+      "keys": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "count": 50,
+      "outcome": "returned-data"
+    },
+    {
+      "name": "Get_Seasonal_Animes",
+      "arguments": {
+        "year": 2026,
+        "season": "summer"
+      },
+      "isError": false,
+      "shape": "object",
+      "keys": [
+        "TV (New)",
+        "ONA",
+        "OVA",
+        "Movie",
+        "Special"
+      ],
+      "outcome": "returned-data",
+      "notes": "Requested summer 2026; first returned item contains date 2026-10-02. Season fidelity is unverified."
+    },
+    {
+      "name": "Get_Anime_Recommendations_by_Anime",
+      "arguments": {
+        "anime_id": 52991
+      },
+      "isError": false,
+      "shape": "object",
+      "keys": [
+        "recommendations",
+        "amount_recommendations"
+      ],
+      "outcome": "returned-data"
+    },
+    {
+      "name": "Get_Anime_Reviews_by_Manga",
+      "arguments": {
+        "manga_id": 121496,
+        "p": 1,
+        "spoilers": false,
+        "preliminary": false,
+        "sort": "suggested",
+        "include_tags": "",
+        "exclude_tags": ""
+      },
+      "isError": false,
+      "shape": "object",
+      "keys": [
+        "message"
+      ],
+      "outcome": "application-error",
+      "notes": "Returned message: Internal Server Error despite isError=false."
+    }
+  ]
+}

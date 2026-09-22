@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.pnpm-store/
 /.pnp
 .pnp.*
 .yarn/*
@@ -12,9 +13,15 @@
 
 # testing
 /coverage
+/playwright-report/
+/test-results/
+/.postgres/
+/.local-mail/
 
 # next.js
 /.next/
+/.next-e2e/
+/.backups/
 /out/
 
 # production
@@ -32,6 +39,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +47,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editor, OS and generated diagnostics
+/.idea/
+/.vscode/
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.log
+*.log.*
+*.trace
+/blob-report/
+/.turbo/
+/.cache/
