@@ -12,6 +12,8 @@ import "./globals.css";
 import "./platform.css";
 import { SiteHeader, SiteFooter } from "@/components/site/shell";
 
+import { Script } from "next/script";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -65,6 +67,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <Script
+          src="https://storage.googleapis.com/website-translation-script/translator.dev.js"
+          data-api-key="wt_44322f01aa314115_o72FCVf_r1fVcmpghL2zFw"
+          data-disable-auto-browser-translation="false"
+        />
       </body>
     </html>
   );
