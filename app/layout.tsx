@@ -12,7 +12,7 @@ import "./globals.css";
 import "./platform.css";
 import { SiteHeader, SiteFooter } from "@/components/site/shell";
 
-import { Script } from "next/script";
+import Script from "next/script";
 
 const outfit = Outfit({
   subsets: ["latin"],
