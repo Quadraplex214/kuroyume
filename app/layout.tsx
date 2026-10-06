@@ -68,8 +68,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <SiteFooter />
         <Script
-          src="https://storage.googleapis.com/website-translation-script/translator.dev.js"
-          data-api-key="wt_44322f01aa314115_o72FCVf_r1fVcmpghL2zFw"
+          src="https://storage.googleapis.com/website-translation-script/translator.staging.js"
+          data-api-key="wt_391b1eba19404e76_4i3lJxuo0qLLomZlodHaaA"
           data-disable-auto-browser-translation="false"
         />
       </body>
