@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import "./platform.css";
 import { SiteHeader, SiteFooter } from "@/components/site/shell";
-
 import Script from "next/script";
 
 const outfit = Outfit({
@@ -68,8 +67,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <SiteFooter />
         <Script
-          src="https://storage.googleapis.com/website-translation-script/translator.staging.js"
-          data-api-key="wt_5ad762b9c71b40e1_87Dbs4WfNOSsY5q81Q3tgQ"
+          src="https://storage.googleapis.com/website-translation-script/translator.dev.js"
+          data-api-key="wt_0deb5fb9ed1e41fa_B3IXLroLaD93yB3iCW96RQ"
           data-disable-auto-browser-translation="false"
         />
       </body>
