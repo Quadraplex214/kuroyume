@@ -142,6 +142,30 @@
   --foreground: #f4f1e8;
   --primary: #f1775e;
   --muted-foreground: #a5aaa2;
+
+  /* Translator widget */
+  --tl-bg: #f1775e;
+  --tl-bg-hover: #ff957c;
+  --tl-color: #171c18;
+  --tl-border: none;
+  --tl-box-shadow: 0 2px 8px #f1775e55;
+  --tl-selected-bg: rgba(23, 28, 24, 0.12);
+
+  --tl-bottom: 24px;
+  --tl-right: 24px;
+  --tl-left: auto;
+  --tl-top: auto;
+
+  --tl-font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --tl-option-font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --tl-option-font-size: 12px;
+  --tl-option-font-weight: 400;
+  --tl-option-line-height: 1.3;
+
+  --tl-option-padding: 8px 12px;
+  --tl-mobile-powered-padding: 4px 6px;
+
+  --tl-color-muted: rgba(23, 28, 24, 0.62);
 }
 html {
   scroll-behavior: smooth;
