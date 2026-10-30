@@ -19,7 +19,7 @@ export function SiteHeader() {
       </a>
       <header className="site-header page-width">
         <Link href="/" className="brand" aria-label="Kuroyume home">
-          <span className="brand-seal" aria-hidden="true">
+          <span className="brand-seal" aria-hidden="true" data-no-read>
             夢
           </span>
           <span>
@@ -86,7 +86,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer page-width">
       <Link href="/" className="brand">
-        <span className="brand-seal">夢</span>
+        <span className="brand-seal" data-no-read>夢</span>
         <span>
           Kuroyume<span className="brand-dot">.</span>
         </span>

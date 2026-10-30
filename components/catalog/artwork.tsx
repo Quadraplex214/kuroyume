@@ -25,7 +25,7 @@ export function Artwork({
     />
   ) : (
     <div className="art-placeholder" role="img" aria-label={alt}>
-      <span>夢</span>
+      <span data-no-read>夢</span>
       <small>Kuroyume</small>
     </div>
   );

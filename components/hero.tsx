@@ -112,15 +112,15 @@ export function Hero() {
         <span>A LITTLE CURIOSITY GOES A LONG WAY</span>
         <div>
           <Link href="/anime">
-            アニメ <b>Anime</b>
+            <p data-no-read>アニメ </p><b>Anime</b>
           </Link>
           <i />
           <Link href="/manga">
-            漫画 <b>Manga</b>
+            <p data-no-read>漫画 </p><b>Manga</b>
           </Link>
           <i />
           <Link href="/manhwa">
-            만화 <b>Manhwa</b>
+            <p data-no-read>만화 </p><b>Manhwa</b>
           </Link>
         </div>
         <Link href="/discover" aria-label="Discover stories">
