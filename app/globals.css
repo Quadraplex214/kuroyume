@@ -167,6 +167,16 @@
 
   --tl-color-muted: rgba(23, 28, 24, 0.62);
 }
+
+#tl-dropdown-container {
+  width: 72px !important;
+  height: 72px !important;
+}
+
+#tl-dropdown svg {
+  width: 32px;
+  height: 32px;
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 28px;
